@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 
 const App = () => {
   return (
-    <Box>
+    <Box sx={{backgroundColor:"blue"}} >
      <Link to='/navbar'>Navbar</Link> 
       <Link to='/feed'>Feeds</Link>
       <Link to='/videos'>Videos</Link>
