@@ -1,11 +1,16 @@
-
+import { Link } from 'react-router-dom';
 import './App.css';
+import { Box } from '@mui/material';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-     Hello
-    </div>
+    <Box>
+     <Link to='/navbar'>Navbar</Link> 
+      <Link to='/feed'>Feeds</Link>
+      <Link to='/videos'>Videos</Link>
+      <Link to='/channel'>Channels</Link>
+      <Link to='/search'>Search</Link>
+    </Box>
   );
 }
 
