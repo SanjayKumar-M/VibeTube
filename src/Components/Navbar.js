@@ -1,8 +1,16 @@
 import React from 'react'
-
+import { Stack } from '@mui/material'
+import { logo } from '../Utils/Constants'
+import { Link } from 'react-router-dom'
+import SearchBar from './SearchBar'
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <Stack direction="row" alignItems="center" p={2} sx={{ position: 'sticky', background: 'black', justifyContent: 'space-between', top: 0 }}>
+      <Link to='/' style={{display:'flex', alignItems:'center'}}>
+        <img src={logo} alt='logo' height={40}/>
+      </Link>
+      <SearchBar />
+    </Stack>
   )
 }
 
