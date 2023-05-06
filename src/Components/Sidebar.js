@@ -15,7 +15,7 @@ const Sidebar = () => {
     }}
   >
     {categories.map((category) => (
-      <button className="category-btn" style={{background:category.name === selected && 'red',color: 'white'}} key={category.name}>
+      <button className="category-btn" style={{background:category.name === selected && 'red',color:'white'}} key={category.name}>
         <span style={{marginRight: 15}}>
           {category.icon}
         </span>
