@@ -2,9 +2,8 @@ import { Stack } from '@mui/material'
 import React from 'react'
 import { categories } from '../Utils/Constants'
 
-const selected = 'New'
 
-const Sidebar = () => {
+const Sidebar = ({selected,setSelected}) => {
   return (
     <Stack
     direction="row"
@@ -15,7 +14,9 @@ const Sidebar = () => {
     }}
   >
     {categories.map((category) => (
-      <button className="category-btn" style={{background:category.name === selected && 'red',color:'white'}} key={category.name}>
+      <button className="category-btn" style={{background:category.name === selected && 'red',color:'white'}} key={category.name} 
+      onClick={()=>setSelected(category.name)}
+      >
         <span style={{marginRight: 15}}>
           {category.icon}
         </span>
