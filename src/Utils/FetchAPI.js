@@ -7,12 +7,14 @@ const headers = {
   'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
 };
 
-export const FetchAPI = async (url) => {
+export const FetchAPI = async (url, maxResults = 50) => {
   try {
-    const response = await axios.get(`${baseURL}/${url}`, { headers });
+    // Add the maxResults parameter to the URL query string
+    const response = await axios.get(`${baseURL}/${url}&maxResults=${maxResults}`, { headers });
     return response.data;
   } catch (error) {
     console.error('API Error:', error);
-    throw error; 
+    throw error;
   }
 };
+
