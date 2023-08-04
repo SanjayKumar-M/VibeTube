@@ -3,7 +3,7 @@ import { Typography, Box } from "@mui/material";
 import { useParams } from "react-router-dom";
 
 import { FetchAPI } from "../Utils/FetchAPI";
-import { Videos } from "./";
+import Videos from "./Videos";
 
 const Search = () => {
   const [videos, setVideos] = useState(null);
